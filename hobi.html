@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobi Saya</title>
+  <link rel="stylesheet" href="css/style_hobi.css">
+</head>
+
+<body>
+  <header class="custom-header">
+    <div class="menu">
+      <button class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="menu-nav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="about.html">Tentang Saya</a></li>
+          <li><a href="hobi.html">Hobi</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="social-search">
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Cari..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Konten Hobi -->
+  <main>
+    <section class="hobi-section">
+      <h1>Hobi Saya</h1>
+      <p>Berikut adalah beberapa hobi yang saya nikmati di waktu luang:</p>
+
+      <div class="hobi-container">
+        <div class="hobi-item">
+          <h3>📖 Membaca</h3>
+          <p>Saya suka membaca buku, terutama novel fiksi dan buku pengembangan diri. Membaca membantu saya memahami
+            dunia dengan cara yang berbeda.</p>
+        </div>
+        <div class="hobi-item">
+          <h3>💻 Belajar Teknologi Baru</h3>
+          <p>Saya tertarik untuk selalu mempelajari teknologi terbaru, terutama dalam bidang pengembangan web. Hal ini
+            membantu saya meningkatkan kemampuan dan tetap relevan di industri teknologi.</p>
+        </div>
+        <div class="hobi-item">
+          <h3>🎮 Bermain Game</h3>
+          <p>Saya menikmati bermain game sebagai hiburan, terutama game petualangan dan strategi.</p>
+        </div>
+        <div class="hobi-item">
+          <h3>⚽ Sepak Bola</h3>
+          <p>Sepak bola adalah olahraga favorit saya. Saya sering bermain bersama teman-teman di akhir pekan atau
+            menonton pertandingan klub favorit saya.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2024 Blog Saya. Semua Hak Dilindungi.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector(".menu-btn").addEventListener("click", function () {
+      const nav = document.querySelector(".menu-nav");
+      nav.style.display = nav.style.display === "block" ? "none" : "block";
+    });
+  </script>
+
+
+</body>
+
+</html>

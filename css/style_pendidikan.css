@@ -1,0 +1,281 @@
+/* --- Umum --- */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f7f7f7, #ececec);
+  color: #333;
+}
+
+/* --- Header Umum --- */
+.custom-header {
+  background-color: white;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 0.6s ease-out;
+  /* Animasi masuk header */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* --- Menu --- */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  /* Sembunyikan pada layar besar */
+}
+
+.menu-nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+
+.menu-nav ul li a:hover {
+  color: #007BFF;
+}
+
+.menu-nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #007BFF;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.menu-nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* --- Link Sosial dan Pencarian --- */
+.social-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links {
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 5px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+}
+
+.search-bar button:hover {
+  color: #007BFF;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    /* Tampilkan menu hamburger */
+  }
+
+  .menu-nav {
+    display: none;
+    /* Sembunyikan menu */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  .menu-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .menu-nav ul li a {
+    padding: 5px 10px;
+  }
+
+  .social-search {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
+
+
+/* --- Kontainer Pendidikan --- */
+.pendidikan-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.pendidikan-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.pendidikan-container .intro {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* --- Timeline Pendidikan --- */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.education-item .icon {
+  font-size: 2em;
+  color: #4CAF50;
+}
+
+.education-item .content h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.education-item .content p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+/* Fade-in Animasi */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan ke elemen timeline */
+.education-item {
+  opacity: 0;
+  /* Awalnya tidak terlihat */
+  animation: fadeInUp 1s ease forwards;
+}
+
+.education-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.education-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.education-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.education-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+
+/* --- Footer --- */
+footer {
+  background: #444;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}

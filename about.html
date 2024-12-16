@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Saya</title>
+  <link rel="stylesheet" href="css/style_about.css">
+</head>
+
+<body>
+  <header class="custom-header">
+    <div class="menu">
+      <button class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="menu-nav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="about.html">Tentang Saya</a></li>
+          <li><a href="hobi.html">Hobi</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="social-search">
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Cari..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="tentang-saya">
+    <section class="profile-container">
+      <!-- Avatar / Foto Profil -->
+      <div class="avatar">
+        <img src="images/Foto Andre.jpeg" alt="Foto Profil" />
+      </div>
+      <!-- Tentang Saya -->
+      <div class="about-me">
+        <h1>Tentang Saya</h1>
+        <p>
+          Halo, saya <strong>Andre Dwi Saputra</strong>. Saya seorang pengembang web dan penulis blog.
+          Saya
+          suka berbagi ide dan pengalaman melalui blog ini. Terima kasih telah berkunjung!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Blog Pribadi. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script>
+    document.querySelector(".menu-btn").addEventListener("click", function () {
+      const nav = document.querySelector(".menu-nav");
+      nav.style.display = nav.style.display === "block" ? "none" : "block";
+    });
+  </script>
+
+</body>
+
+</html>

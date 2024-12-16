@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Gaya untuk Judul dan Tanggal di Atas Gambar */
+.judul-container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Transparan hitam */
+  color: white;
+  position: absolute;
+  /* Posisikan di atas gambar */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 90%;
+  /* Sesuaikan lebar */
+  border-radius: 10px;
+}
+
+.judul-container h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.judul-container .tanggal {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Gambar Artikel */
+.artikel-img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+/* Jarak Atas untuk Artikel */
+.artikel-content {
+  margin-top: 40px;
+  /* Tambahkan jarak dari gambar */
+  padding: 20px;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.aksi {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bagikan {
+  position: relative;
+  display: inline-block;
+}
+
+.bagikan-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bagikan-btn:hover {
+  background-color: #555;
+}
+
+.bagikan-icons {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.bagikan:hover .bagikan-icons {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bagikan-icons .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bagikan-icons .icon:hover {
+  background-color: #3E8E41;
+}
+
+
+/* Seksi Komentar */
+.komentar {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.komentar h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+#form-komentar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#form-komentar textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.kirim-btn {
+  align-self: flex-end;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.kirim-btn:hover {
+  background-color: #3E8E41;
+}
+
+.daftar-komentar {
+  margin-top: 20px;
+}
+
+.komentar-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.komentar-item p {
+  margin: 0;
+}
+
+footer {
+  background: #444;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}

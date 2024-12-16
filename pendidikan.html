@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendidikan</title>
+  <link rel="stylesheet" href="css/style_pendidikan.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <header class="custom-header">
+    <div class="menu">
+      <button class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="menu-nav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="about.html">Tentang Saya</a></li>
+          <li><a href="hobi.html">Hobi</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="social-search">
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Cari..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="pendidikan-container">
+    <h1>Pendidikan</h1>
+    <p class="intro">Berikut adalah perjalanan pendidikan saya yang telah membentuk saya menjadi pribadi yang terus
+      ingin belajar.</p>
+
+    <div class="education-timeline">
+      <div class="education-item">
+        <div class="icon"><i class="fas fa-school"></i></div>
+        <div class="content">
+          <h3>Sekolah Dasar</h3>
+          <p>SDN Remen 2 (2012 - 2018)</p>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <div class="icon"><i class="fas fa-user-graduate"></i></div>
+        <div class="content">
+          <h3>Sekolah Menengah Pertama</h3>
+          <p>SMPN 1 Jenu (2019 - 2022)</p>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="content">
+          <h3>Sekolah Menengah Kanjuruan</h3>
+          <p>SMKN Tambakboyo (2023 - 2025)</p>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Blog Pribadi. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script>
+    document.querySelector(".menu-btn").addEventListener("click", function () {
+      const nav = document.querySelector(".menu-nav");
+      nav.style.display = nav.style.display === "block" ? "none" : "block";
+    });
+  </script>
+
+</body>
+
+</html>
