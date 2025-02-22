@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="image/Logo Panduri no bg.png">
+  <title>Wisata Pantai Panduri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+AU+TAS+Guides&family=Playwrite+GB+S+Guides:ital@0;1&family=Raleway:wght@300;400;600&family=Lobster&family=Dancing+Script:wght@400;600&family=Comfortaa:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.carousel-image');
+      let currentIndex = 0;
+
+      function changeImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+      }
+
+      // Set gambar pertama aktif
+      images[currentIndex].classList.add('active');
+
+      // Interval untuk mengganti gambar
+      setInterval(changeImage, 5000); // Ganti gambar setiap 5 detik
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo-text">
+        <img src="image/Logo Panduri no bg.png" alt="Logo Pantai Panduri">
+        <h1>Pantai Panduri</h1>
+      </div>
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="image/Logo Panduri no bg.png" alt="Logo Panduri">
+        <p>Pantai Panduri</p>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#services">Layanan</a>
+        <a href="image/pricelist.jpeg">Pricelist</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="home" class="hero">
+    <div class="carousel">
+      <div class="carousel-image" style="background-image: url(image/hero1.jpeg); background-position: bottom;"></div>
+      <div class="carousel-image" style="background-image: url(image/hero2.jpeg); background-position: 25% 40%;">
+      </div>
+      <div class="carousel-image" style="background-image: url('image/hero3.jpeg');background-position: 10% 62%;">
+      </div>
+      <div class="carousel-image" style="background-image: url('image/hero4.jpeg');background-position: 10% 50%;">
+      </div>
+      <div class="carousel-image" style="background-image: url('image/hero5.jpeg');background-position: center;">
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-h2">
+        <h2>Pantai</h2>
+        <h2>Panduri</h2>
+      </div>
+      <p>Nikmati surga tersembunyi di pesisir Tuban</p>
+    </div>
+  </div>
+  <div class="cursor-trail"></div>
+
+  <section id="about">
+    <div class="container">
+      <h2>Tentang Kami</h2>
+      <div class="about-flex">
+        <div class="about-image">
+          <img src="image/kamping(1).jpeg" alt="Pantai Panduri">
+        </div>
+        <div class="about-content">
+          <p class="welcome">Welcome to Pantai Panduri</p>
+          <p>
+            Selamat datang di Pantai Panduri, surga tersembunyi di pesisir Tuban yang menawarkan pengalaman berkemah
+            di
+            tepi laut. Nikmati pemandangan laut biru, pasir putih, dan malam bertabur bintang diiringi deburan ombak
+            yang
+            menenangkan.
+          </p>
+          <br>
+          <p>
+            Pantai Panduri dilengkapi fasilitas seperti area camping, akses air bersih, dan tempat api unggun untuk
+            mendukung kenyamanan Anda. Rasakan suasana harmonis dengan alam di Pantai Panduri, destinasi tepat untuk
+            berkemah di Tuban.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <div class="container">
+      <h2>Sejarah Pantai Panduri</h2>
+      <div class="history-content">
+        <p>
+          Pantai Panduri yang terletak di Desa Tasikharjo, Kecamatan Jenu, Kabupaten Tuban, Jawa Timur, awalnya
+          merupakan area pesisir yang kurang dimanfaatkan oleh masyarakat setempat.
+        </p>
+        <p>
+          Nama "Pantai Panduri" berasal dari tanaman pandan berduri yang tumbuh subur di sepanjang pesisir pantai ini.
+          Pada masa lalu, area ini dipenuhi semak belukar pandan berduri yang menjadi ciri khasnya.
+        </p>
+        <div class="history-timeline">
+          <div class="timeline-item">
+            <h3>Tahap Awal (Pendirian)</h3>
+            <p>
+              Tahun 2017-2018: Pantai Panduri resmi didirikan atas inisiatif masyarakat Desa Tasikharjo untuk
+              mengelola
+              potensi wisata pesisir. Melalui kerja sama gotong royong, mereka mulai membuka akses menuju pantai,
+              membersihkan area sekitar, dan mempromosikan keindahan Pantai Panduri kepada pengunjung lokal.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Tahap Penurunan (Penutupan)</h3>
+            <p>
+              Tahun 2019-2021: Akibat pandemi COVID-19, aktivitas wisata dan pengelolaan Pantai Panduri terhenti.
+              Pantai ditutup sementara, yang menyebabkan perlambatan dalam pengembangan dan promosi.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Tahap Kebangkitan (Revitalisasi)</h3>
+            <p>
+              Tahun 2022: Dukungan dari program CSR PT Pertamina Patra Niaga Fuel Terminal Tuban menjadi titik
+              kebangkitan Pantai Panduri. Fasilitas wisata mulai ditingkatkan, masyarakat diberdayakan, dan kegiatan
+              pelestarian lingkungan dimulai untuk menjadikan pantai lebih menarik dan berkelanjutan.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Tahap Pengembangan (Ekspansi)</h3>
+            <p>
+              Tahun 2023 - sekarang: Pantai Panduri terus berkembang dengan fokus pada peningkatan fasilitas wisata,
+              seperti camping ground dan area outbound, serta promosi sebagai destinasi wisata unggulan. Program
+              pelestarian lingkungan dan pemberdayaan ekonomi lokal juga semakin diperkuat untuk memastikan
+              keberlanjutan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Layanan Kami</h2>
+
+    <!-- Camping Ground -->
+    <div class="service" id="camping">
+      <img src="image/kamping(3).jpeg" alt="Camping Ground">
+      <div class="service-text">
+        <h3>Camping Ground</h3>
+        <p>
+          Rasakan sensasi berkemah di tepi Pantai Panduri dengan pemandangan matahari terbit dan suara ombak yang
+          menenangkan. Dilengkapi area tenda luas, toilet bersih, dan penyewaan perlengkapan camping untuk pengalaman
+          yang nyaman dan berkesan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Area Kuliner -->
+    <div class="service" id="kuliner">
+      <img src="image/service2.jpeg" alt="Area Kuliner">
+      <div class="service-text">
+        <h3>Area Kuliner</h3>
+        <p>
+          Area kuliner Pantai Panduri menawarkan aneka jajanan lokal dari warung tradisional hingga beberapa pilihan
+          makanan berat yang lezat. Anda dapat menikmati hidangan sederhana dengan cita rasa khas, sambil menikmati
+          suasana pantai yang asri dan menenangkan. Cocok untuk bersantai bersama keluarga atau teman.
+        </p>
+      </div>
+    </div>
+
+    <!-- Area Aktivitas Outdoor -->
+    <div class="service" id="outdoor">
+      <img src="image/service3.jpeg" alt="Area Aktivitas Outdoor">
+      <div class="service-text">
+        <h3>Area Aktivitas Outdoor</h3>
+        <p>
+          Rasakan keseruan berbagai aktivitas outdoor di area yang dirancang khusus untuk olahraga dan permainan luar
+          ruangan. Anda dapat bermain voli pantai, yoga, hingga aktivitas seni dan budaya di ruang terbuka. Tempat ini
+          cocok untuk semua usia dan dapat digunakan untuk acara khusus.
+        </p>
+      </div>
+    </div>
+
+    <!-- Kebun Bibit -->
+    <div class="service" id="bibit">
+      <img src="image/service5.jpeg" alt="Kebun Bibit">
+      <div class="service-text">
+        <h3>Kebun Bibit</h3>
+        <p>
+          Kunjungi kebun bibit Pantai Panduri untuk melihat koleksi tanaman lokal dan belajar tentang pelestarian
+          lingkungan. Area ini memberikan pengalaman edukasi tentang penghijauan, lengkap dengan program penanaman
+          pohon
+          yang bisa diikuti oleh pengunjung.
+        </p>
+      </div>
+    </div>
+
+    <!-- Homestay -->
+    <div class="service" id="homestay">
+      <img src="image/service6.jpeg" alt="Homestay">
+      <div class="service-text">
+        <h3>Homestay</h3>
+        <p>
+          Homestay Pantai Panduri menawarkan pengalaman menginap yang nyaman dengan lokasi strategis dekat dengan
+          pantai. Lokasi homestay hanya beberapa langkah dari garis pantai. Dengan fasilitas memadai dan keramahan
+          khas masyarakat lokal.
+        </p>
+      </div>
+    </div>
+    <!-- Aula Terbuka -->
+    <div class="service" id="aulaTerbuka">
+      <img src="image/service7.jpeg" alt="Homestay">
+      <div class="service-text">
+        <h3>Aula Terbuka</h3>
+        <p>
+          Aula terbuka Pantai Panduri cocok untuk acara pertemuan, bersantai, atau kegiatan seni dan budaya. Dengan
+          pemandangan langsung ke pantai, aula ini memberikan suasana alami yang nyaman dan inspiratif untuk
+          berbagai jenis kegiatan.
+        </p>
+      </div>
+    </div>
+    <!-- Aula Tertutup -->
+    <div class="service" id="#aulaTertutup">
+      <img src="image/service8.jpeg" alt="Homestay">
+      <div class="service-text">
+        <h3>Aula Tertutup</h3>
+        <p>
+          Aula tertutup Pantai Panduri adalah ruang serbaguna dengan ukuran yang dapat disesuaikan untuk berbagai
+          kebutuhan. Aula tertutup memberikan fleksibilitas bagi Anda yang ingin menggunakannya untuk acara
+          formal, pelatihan, atau pertemuan dengan pengaturan sesuai kebutuhan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="image/image1.jpeg" alt="Pantai di pagi hari">
+        <h3>Pantai di Pagi Hari</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image/image2.jpeg" alt="Malam Berbintang">
+        <h3>Malam Berbintang</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image/kamping(3).jpeg" alt="Camping Seru">
+        <h3>Camping Seru</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image/image4.jpg" style="height: 240px;" alt="Sunset Indah">
+        <h3>Sunset Indah</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image/image5.JPG" style="height: 238px;" alt="Outbound Seru">
+        <h3>Outbound Seru</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image/image6.jpeg" alt="Kegiatan Edukasi">
+        <h3>Kegiatan Edukasi</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image/service5.jpeg" alt="Pohon Hijau">
+        <h3>Pohon Hijau</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image/image8.jpeg" style="height: 240px;" alt="Berlayar di Laut">
+        <h3>Kegiatan Pelatihan Water Rescue</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak Kami</h2>
+
+    <div class="contact-container">
+      <form class="contact-form">
+        <div class="form-group">
+          <div class="input-box">
+            <input type="text" id="name" required>
+            <label for="name">Full Name</label>
+          </div>
+          <div class="input-box">
+            <input type="email" id="email" required>
+            <label for="email">Alamat</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-box">
+            <input type="text" id="phone" required>
+            <label for="phone">Phone</label>
+          </div>
+
+          <div class="input-box dropdown">
+            <select id="package" required>
+              <option value="" disabled selected></option>
+              <option>Wisata Pantai</option>
+              <option>Camping</option>
+              <option>Outbond</option>
+              <option>Kegiatan Outdoor</option>
+            </select>
+            <label for="package">Paket Liburan</label>
+            <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-box">
+            <input type="date" id="date" required>
+            <label for="date">Pilih Tanggal</label>
+          </div>
+
+          <div class="input-box">
+            <input type="number" id="visitors" required>
+            <label for="visitors">Jumlah Pengunjung</label>
+          </div>
+        </div>
+
+        <div class="input-box full-width">
+          <textarea id="message" rows="5" required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+
+        <div class="button-group">
+          <button type="submit">Kirim Pesan</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Peta -->
+  <div class="map-container" id="visitUs">
+    <h3>Peta Lokasi</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43280.11032307926!2d111.93049786114938!3d-6.799364130812055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77a6688c58dc13%3A0xed6292b4c9e3cafe!2sPantai%20PANDURI!5e0!3m2!1sid!2sid!4v1738291539567!5m2!1sid!2sid"
+      width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" width="100%" height="400" style="border:0;" allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="image/Logo Panduri no bg.png" alt="Logo Wisata Pantai Panduri" class="footer-logo">
+        <p>Pantai Panduri: Tempat untuk menikmati pemandangan laut biru, pasir putih, dan malam bertabur bintang
+          diiringi deburan ombak
+          yang menenangkan</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-middle">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <h3>Contacts</h3>
+        <p><strong>Alamat:</strong> ...</p>
+        <p><strong>Email:</strong> ...</p>
+        <p><strong>Phone:</strong> (+62) ...</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright 2025 Pantai Panduri.<strong> All Rights Reserved</strong></p>
+    </div>
+
+    <!-- Tombol WhatsApp & Scroll Up -->
+    <div class="floating-buttons">
+      <a href="#" class="scroll-up"><i class="fa-solid fa-chevron-up"></i></a>
+      <a href="https://wa.me/62895366637605" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
