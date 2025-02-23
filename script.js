@@ -31,9 +31,23 @@ window.addEventListener("scroll", () => {
   if (isHome) {
     nav.classList.remove("scrolled-nav");
     menu.classList.remove("scrolled-menu");
+    menu.classList.add("home-menu"); // Tambahkan class untuk menu gelap di home
   } else {
     nav.classList.add("scrolled-nav");
     menu.classList.add("scrolled-menu");
+    menu.classList.remove("home-menu"); // Hapus class menu gelap saat keluar dari home
+  }
+});
+
+// Tambahkan event listener untuk hamburger menu
+document.querySelector(".hamburger").addEventListener("click", () => {
+  const menu = document.querySelector(".menu");
+  const homeSection = document.querySelector("#home");
+
+  // Pastikan warna menu tetap gelap saat di home
+  if (homeSection.getBoundingClientRect().top > -100) {
+    menu.classList.add("home-menu");
+    menu.classList.remove("scrolled-menu");
   }
 });
 

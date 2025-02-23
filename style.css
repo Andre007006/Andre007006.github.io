@@ -219,25 +219,25 @@ nav .hamburger.active span:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Navbar saat Aktif */
-/* Warna menu aktif saat di #home */
-nav .menu.active {
-  /* Biru muda */
-  background: rgba(30, 30, 30, 0.95);
+/* Menu aktif saat di #home (gelap) */
+nav .menu.active.home-menu {
+  background: rgba(30, 30, 30, 0.709) !important;
+  /* Warna gelap tetap */
 }
 
-/* Warna navbar saat keluar dari #home */
+/* Navbar biru muda saat keluar dari #home */
 nav.scrolled-nav {
   background: rgba(135, 206, 235, 0.95);
-  /* Gelap */
+  /* Biru muda */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Warna menu aktif saat keluar dari #home */
+/* Menu aktif biru muda saat keluar dari #home */
 nav .menu.active.scrolled-menu {
-  background: rgba(30, 30, 30, 0.95);
-  /* Gelap */
+  background: rgba(135, 206, 235, 0.95) !important;
+  /* Biru muda */
 }
+
 
 nav .menu.active {
   display: flex;
@@ -253,7 +253,7 @@ nav .menu.active {
 
 nav .menu.active a {
   display: block;
-  padding: 8px 0;
+  padding: 10px 0;
 }
 
 .hero {
@@ -327,11 +327,11 @@ nav .menu.active a {
 
 /* Menambahkan animasi delay untuk elemen h2 */
 .hero-h2 h2:nth-child(1) {
-  animation-delay: 4.3s;
+  animation-delay: 4.5s;
 }
 
 .hero-h2 h2:nth-child(2) {
-  animation-delay: 4.7s;
+  animation-delay: 4.9s;
 }
 
 /* Keyframes untuk Fade In Teks */
@@ -959,6 +959,27 @@ footer {
 
 /* Responsive Tablet*/
 @media (max-width: 768px) {
+  .preloader-logo-text {
+    flex-direction: column;
+    /* Logo dan teks ke bawah saat layar kecil */
+    gap: 5px;
+  }
+
+  .preloader-logo-text img {
+    width: 60px;
+    /* Perkecil logo di layar kecil */
+  }
+
+  .preloader-logo-text h1 {
+    font-size: 1.5rem;
+    /* Ukuran teks lebih kecil */
+  }
+
+  .loader {
+    width: 40px;
+    height: 40px;
+  }
+
   nav .menu {
     display: none;
     flex-direction: column;
@@ -1020,6 +1041,7 @@ footer {
   }
 
   .service-text {
+    padding-top: 5px;
     text-align: center;
   }
 
@@ -1058,25 +1080,46 @@ footer {
 
 /* Responsive Mobile */
 @media screen and (max-width: 480px) {
+  .preloader-logo-text img {
+    width: 100px;
+  }
+
+  .preloader-logo-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .loader {
+    width: 40px;
+    height: 40px;
+  }
+
   .logo img {
     height: 30px;
   }
 
   .logo p {
-    font-size: 1.1rem !important;
+    font-size: 1.3rem !important;
   }
 
   h2 {
     font-size: 2rem;
   }
 
+  p {
+    font-size: 1rem;
+  }
+
   .hero-h2 h2 {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
     letter-spacing: 8px;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .service {
+    gap: 30px;
   }
 
   #services h2 {
